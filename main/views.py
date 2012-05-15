@@ -7,3 +7,4 @@ def home(request):
         "pages_list": Page.objects.all(),
     }
     return render_to_response('index.html', response)
+

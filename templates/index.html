@@ -20,9 +20,9 @@
 			{% for page in pages_list %}
 			<article>
 				<h2>{{ page.title }}</h2>
-				<img src="{{ page.imageTitle }}" alt="">
+				<img src="/media/{{ page.postimage }}" alt="">
 				<p>{{ page.resumen }}</p>
-				<a href="{{ page.slug }}" class="readlink buttonblue">Leer más</a>
+				<a href="servicios/{{ page.slug }}/" class="readlink buttonblue">Leer más</a>
 			</article>
             {% endfor %}
 {% endblock %}
