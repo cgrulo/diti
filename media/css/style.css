@@ -217,6 +217,7 @@ header nav ul li a{
 	letter-spacing: -.05em;
 }
 #maincontent article{
+	height: 550px;
 	width: 338px;
 	float: left;
 	margin: 10px;
