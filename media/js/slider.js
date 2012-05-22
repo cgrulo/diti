@@ -28,6 +28,6 @@ ChSlider.slide = function(elements){
 	}else{
 		this.slideCount = 0;
 	}
-
+};
 
 ChSlider.init(slideroptions);
