@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response
-from django.http import http_response
+from django.http import HttpResponse
 from main.models import Slide, Page
 import os
 import commands
