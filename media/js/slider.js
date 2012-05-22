@@ -1,6 +1,6 @@
 var slideroptions = {
 	sliderID: "slider",
-	slideTime: 5000
+	slideTime: 3000
 };
 
 var ChSlider = {};
