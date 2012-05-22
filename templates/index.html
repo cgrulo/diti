@@ -3,7 +3,7 @@
 			<section id="slider" class="graybars">
 				<ul>
 					{% for slide in slides_list %}
-					<li class="active">
+					<li {% if forloop.first %}class="active"{% endif %}>
 						<a href="{{ slide.url }}" class="aimg">
 							<img src="/media/{{ slide.image }}" alt="{{ slide.imageTitle }}">
 							<span>{{ slide.imageTitle }}</span>

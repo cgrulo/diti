@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^servicios/(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Page,
                                         template_name="page.html")),
-                       
+    url(r'^pull-repo/$', 'main.views.pull'),                   
 )
 
 if settings.DEBUG:
