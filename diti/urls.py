@@ -10,14 +10,13 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'main.views.home'),
     # url(r'^diti/', include('diti.foo.urls')),
-    
+    url(r'^pull-repo/?$', 'main.views.pull'),                   
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^servicios/(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Page,
                                         template_name="page.html")),
-    url(r'^pull-repo/?$', 'main.views.pull'),                   
 )
 
 if settings.DEBUG:
