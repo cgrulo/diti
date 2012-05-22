@@ -16,4 +16,4 @@ def pull(request):
 	os.chdir(os.path.dirname(os.path.dirname(__file__)))
 	gitpull = commands.getstatusoutput('git pull')[1]
 
-    return HttpResponse(gitpull)
+	return HttpResponse(gitpull)
