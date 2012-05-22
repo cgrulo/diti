@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from django.views.generic import DetailView
-from main.models import Page
+from main.models import Page, Section
 
 admin.autodiscover()
 
@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^diti/', include('diti.foo.urls')),
     url(r'^auto-pull/?$', 'main.views.pull'),
     url(r'^contacto/?$', 'main.views.contact'),
-    url(r'^thanks/?$', 'main.views.contact'),
+    url(r'^acerca-de-nosotros/?$', Section.objects.filter(title="Acerca de Nosotros")),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
