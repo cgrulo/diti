@@ -10,7 +10,8 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'main.views.home'),
     # url(r'^diti/', include('diti.foo.urls')),
-    url(r'^auto-pull/', 'main.views.pull'),                   
+    url(r'^auto-pull/?$', 'main.views.pull'),
+    url(r'^contacto/?$', 'main.views.contact'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),

@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
-from main.models import Slide, Page
+from django.http import HttpResponse, HttpResponseRedirect
+from main.models import Slide, Page, ContactForm
 import os
 import commands
 
@@ -17,3 +17,12 @@ def pull(request):
 	gitpull = commands.getstatusoutput('git pull')[1]
 
 	return HttpResponse(gitpull)
+    
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        return HttResponseRedirect('/thanks/')
+    else:
+        form = ContactForm()
+        
+    return render_to_response('contact.html', { 'form' : form,}) 

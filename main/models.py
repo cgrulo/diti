@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 # Create your models here.
 
@@ -24,4 +25,16 @@ class Slide(models.Model):
     
     def __unicode__ (self):
         return self.title
+
+class Section(models.Model):
+    title = models.CharField(max_length=60)
+    slug = models.SlugField()
+    content = models.TextField()
+
+   
+class ContactForm(forms.Form):
+    nombre = forms.CharField()
+    empresa = forms.CharField()
+    asunto = forms.CharField()
+    mensaje = forms.CharField()
     
