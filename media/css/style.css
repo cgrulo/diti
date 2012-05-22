@@ -242,4 +242,55 @@ header nav ul li a{
 footer{
 	clear: both;
 	margin-top:30px;
+	overflow: auto;
+	height:230px;
+	border-radius: 5px;
+}
+footer section {
+	width: 280px;
+	padding: 10px;
+	float: left;
+	border-left: 1px solid #9a9999;
+	border-right: 1px solid rgba(255,255,255, .25);
+	height: 208px;
+}
+#sols {
+	border-left: none;
+}
+footer #socials{
+	width: 150px;
+	border-right: none;
+}
+footer section h3{
+	font-size: 1.5em;
+	font-weight: normal;
+}
+footer section h3 a{
+	text-decoration: none;
+}
+footer section a{
+	text-decoration: none;
+}
+footer #socials ul{
+	padding: 0;
+}
+footer #socials ul li{
+	list-style: none;
+	width: 48px;
+	height: 48px;
+	padding: 0;
+	margin: 0 10px 0 0;
+	float: left;
+}
+footer #socials ul li a{
+	display: block;
+	width: 48px;
+	height:48px;
+	text-indent: -9999em;
+}
+footer #socials ul li #twiticon {
+	background:url(../img/twitter_48.png);
+}
+footer #socials ul li #faceicon {
+	background: url(../img/facebook_48.png);
 }
