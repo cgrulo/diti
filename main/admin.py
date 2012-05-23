@@ -3,6 +3,8 @@ from main.models import Page, Slide, Section
 
 class PageAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug" : ("title",)}
+    class Media:
+        js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js')
 
 class SectionAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug" : ("title",)}    
