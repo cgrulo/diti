@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+			{% for page in object_list %}
+			<article>
+				<h2>{{ page.title|safe }}</h2>
+				<img src="/media/{{ page.postimage }}" alt="">
+				<p>{{ page.resumen }}</p>
+				<a href="servicios/{{ page.slug }}/" class="readlink buttonblue">Leer más</a>
+			</article>
+            {% endfor %}
+{% endblock %}
