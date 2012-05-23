@@ -30,6 +30,9 @@ class Section(models.Model):
     title = models.CharField(max_length=60)
     slug = models.SlugField()
     content = models.TextField()
+    
+    def __unicode__ (self):
+        return self.title
 
    
 class ContactForm(forms.Form):
