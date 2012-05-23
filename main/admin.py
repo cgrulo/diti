@@ -7,7 +7,9 @@ class PageAdmin(admin.ModelAdmin):
         js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js')
 
 class SectionAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug" : ("title",)}    
+    prepopulated_fields = {"slug" : ("title",)}   
+    class Media:
+        js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js') 
 
 admin.site.register(Page, PageAdmin)
 admin.site.register(Section, SectionAdmin)
