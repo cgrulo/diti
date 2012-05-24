@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
-from django.views.generic import DetailView, list_view
+from django.views.generic import DetailView, list_detail
 from main.models import Page, Section
 
 admin.autodiscover()
@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^auto-pull/?$', 'main.views.pull'),
     url(r'^contacto/?$', 'main.views.contact'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^servicios/?$', list_view.object_list, {
+    url(r'^servicios/?$', list_detail.object_list, {
                                         'queryset' : Page.objects.all(),
                                         'template_name' :'services.html',
                                         }),
