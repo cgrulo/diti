@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from django.views.generic import DetailView, list_detail
-from main.models import Page, Section
+from main.models import Page, Section, Product, ProductCategory
 
 admin.autodiscover()
 
@@ -16,9 +16,14 @@ urlpatterns = patterns('',
                                         'queryset' : Page.objects.all(),
                                         'template_name' :'services.html',
                                         }),
+    
+
+    
     url(r'^servicios/(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Page,
                                         template_name="page.html")),
+    
+
     url(r'^(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Section,
                                         template_name="section.html")),

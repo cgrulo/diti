@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+			{% for ProductCategory in object_list %}
+			<article>
+				<h2>{{ ProductCategory.title|safe }}</h2>
+				<a href="servicios/{{ page.slug }}/" class="readlink buttonblue">Leer más</a>
+			</article>
+            {% endfor %}
+{% endblock %}
