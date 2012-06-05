@@ -16,14 +16,13 @@ urlpatterns = patterns('',
                                         'queryset' : Page.objects.all(),
                                         'template_name' :'services.html',
                                         }),
-    
-
-    
     url(r'^servicios/(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Page,
                                         template_name="page.html")),
-    
-
+    url(r'^productos/?$', list_detail.object_list, {
+                                        'queryset' : ProductCategory.objects.all(),
+                                        'template_name' : 'categories.html',
+                                        }),
     url(r'^(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Section,
                                         template_name="section.html")),

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django import forms
 
@@ -55,13 +56,15 @@ class Product(models.Model):
 class ProductCategory(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
+    image = models.ImageField(upload_to='img/')
     
     def __unicode__(self):
         return self.title
    
 class ContactForm(forms.Form):
-    nombre = forms.CharField()
+    nombre = forms.CharField(label="Nombre", required=True)
+    email = forms.EmailField(label="Correo electrónico", required=True)
     empresa = forms.CharField()
     asunto = forms.CharField()
-    mensaje = forms.CharField()
+    mensaje = forms.CharField(widget=forms.Textarea, required=True)
     

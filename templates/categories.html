@@ -1,0 +1,13 @@
+{% extends "base_2_cols.html" %}
+{% block contentcol %}
+	<div id="secwrapper">
+	{% for category in object_list %}
+		<article class="categories">
+			<a href="{{ category.slug }}" title="{{ category.title }}">
+				<img src="/media/{{ category.image }}" alt="{{ category.title }}" />
+			</a>
+			<h3><a href="{{ category.slug }}"></a>{{ category.title }}</a></h3>			
+		</article>	
+	{% endfor %}
+	</div>
+{% endblock %}

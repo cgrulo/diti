@@ -1,14 +1,9 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base_2_cols.html" %}
+{% block contentcol %}
 <h1>Contácta con Nosotros</h1>
-	<form action="send_mail1.php" method="post">
-		Nombre completo: <input type="text" value="" name="nombre" size="40">
-		E-mail: <input type="text" value="" name="raul.castillo@ditisoluciones.com" size="40">
-	<input type="hidden" value="destinatario@dominio.com" name="acorreo" size="30">
-		Asunto: <input type="text" value="" name="asunto" size="40">
-		Mensaje:<textarea name="mensaje" cols="27" rows="6"></textarea>
-	<input type="submit" name="submit" value="Enviar">
-	<input type="reset" name="submit2" value="Borrar">
-</form> 
+<form action="/contacto/" method="post">{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Enviar" class="buttonblue" />
+</form>
 
 {% endblock %}

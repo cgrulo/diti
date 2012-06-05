@@ -294,3 +294,37 @@ footer #socials ul li #twiticon {
 footer #socials ul li #faceicon {
 	background: url(../img/facebook_48.png);
 }
+#secwrapper{
+	width: 716px;
+	overflow: auto;
+	display:block;
+	float: left;
+	margin: 3px 0px 10px 0px;
+}
+.categories {
+	position: relative;
+	height: 224px !important;
+}
+.categories h3{
+	position: absolute;
+	font-weight: normal;
+	font-size: 28px;
+	width: 298px;
+	top: 170px;
+	left: 10px;
+	background: rgba(0,0,0,.5);
+	margin: 0 0 0 -10px;
+	padding: 10px 20px;
+	color: #FFF;
+}
+.categories h3 a{
+	display:block;
+	width: 100%;
+	overflow: auto;
+}
+
+#sidebar {
+	width: 318px;
+	float: right;
+	padding: 20px;
+} 
