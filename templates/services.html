@@ -4,7 +4,7 @@
 			<article>
 				<h2>{{ page.title|safe }}</h2>
 				<img src="/media/{{ page.postimage }}" alt="">
-				<p>{{ page.resumen }}</p>
+				<p>{{ page.resumen|safe }}</p>
 				<a href="servicios/{{ page.slug }}/" class="readlink buttonblue">Leer más</a>
 			</article>
             {% endfor %}
