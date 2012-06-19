@@ -1,7 +1,8 @@
 {% extends "base_2_cols.html" %}
 {% block contentcol %}
 <h1>Contácta con Nosotros</h1>
-<form action="/contacto/" method="post">{% csrf_token %}
+<form action="." method="post">
+	{% csrf_token %}
 	{{ form.as_p }}
 	<input type="submit" value="Enviar" class="buttonblue" />
 </form>

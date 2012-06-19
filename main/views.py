@@ -1,8 +1,11 @@
-from django.shortcuts import render_to_response
-from django.http import HttpResponse, HttpResponseRedirect
-from main.models import Slide, Page, ContactForm
 import os
 import commands
+from django.shortcuts import render_to_response
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core.mail import EmailMessage
+from django.core.context_processors import csrf
+from main.models import Slide, Page, ContactForm
+
 
 
 def home(request):
@@ -21,8 +24,17 @@ def pull(request):
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        return HttResponseRedirect('/thanks/')
+        if  form.is_valid():
+            asunto = request.POST['asunto']
+            nombre = request.POST['nombre']
+            empresa = request.POST['empresa']
+            subject = "[Contacto Diti] %s  (%s de %s)" %(asunto, nombre, empresa)
+            email = EmailMessage(subject, request.POST['mensaje'], request.POST['email'], ['contacto@ditisoluciones.com'], ['carlos.roman@ditisoluciones.com', 'fernando.alvarez@ditisoluciones.com', 'arturo.gonzalez@ditisoluciones.com', 'raul.castillo@ditisoluciones.com'], headers={'Reply-To': request.POST['email']})
+            email.send()
+            return HttpResponseRedirect('/gracias/')
     else:
         form = ContactForm()
-        
-    return render_to_response('contact.html', { 'form' : form,}) 
+    c = {'form' : form }
+    c.update(csrf(request))    
+    return render_to_response('contact.html', c) 
+
