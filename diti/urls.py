@@ -23,6 +23,7 @@ urlpatterns = patterns('',
                                         'queryset' : ProductCategory.objects.all(),
                                         'template_name' : 'categories.html',
                                         }),
+    url(r'^productos/(?P<slug>[^/]+)/$', 'main.views.product_category'), 
     url(r'^(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Section,
                                         template_name="section.html")),

@@ -1,12 +1,10 @@
 import os
 import commands
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import EmailMessage
 from django.core.context_processors import csrf
-from main.models import Slide, Page, ContactForm
-
-
+from main.models import Slide, Page, Product, ProductCategory, ContactForm
 
 def home(request):
     response = {
@@ -38,3 +36,9 @@ def contact(request):
     c.update(csrf(request))    
     return render_to_response('contact.html', c) 
 
+def product_category(request, slug):
+    category = get_object_or_404(ProductCategory, slug=slug)
+    return render_to_response('product_category.html', {
+        'category': category,
+        'products': Product.objects.filter(categoria=category)
+    })
