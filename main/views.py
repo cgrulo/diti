@@ -38,6 +38,7 @@ def contact(request):
 
 def product_category(request, slug):
     category = get_object_or_404(ProductCategory, slug=slug)
+    Product.objects.filter(categoria=category)
     return render_to_response('product_category.html', {
         'category': category,
         'products': Product.objects.filter(categoria=category)

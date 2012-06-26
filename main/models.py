@@ -34,11 +34,15 @@ class Section(models.Model):
     
     def __unicode__ (self):
         return self.title
-
+# Blog
 class BlogPost(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     imagen = models.ImageField(upload_to='img/')
+    content = models.TextField()
+    
+class BlogCategory(models.Model):
+    title = models.CharField(max_length=100)
     
 # Productos
 
