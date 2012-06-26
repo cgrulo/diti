@@ -44,6 +44,7 @@ body a {
 	-moz-box-shadow: inset 0px -1px #0b99de;
 	-webkit-box-shadow: inset 0px -1px #0b99de;
 	box-shadow: inset 0px -2px #0b99de;
+	text-decoration: none;
 }
 .graybars {
 	background-image: linear-gradient(bottom, rgb(157,156,156) 0%, rgb(208,208,208) 100%);
@@ -184,7 +185,7 @@ header nav ul li a{
 	color: #FFF;
 	font-size: 3.5em;
 	padding: 55px 20px 20px 20px;
-	text-shadow: 0 0 8px #000;	
+	text-shadow: 0 0 8px #000;
 }
 #slider ul li div {	
 	float: right;
@@ -321,6 +322,9 @@ footer #socials ul li #faceicon {
 	display:block;
 	width: 100%;
 	overflow: auto;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-shadow: 0 0 8px #000;
 }
 
 #sidebar {
@@ -328,3 +332,6 @@ footer #socials ul li #faceicon {
 	float: right;
 	padding: 20px;
 } 
+.single-product .buttonblue {
+	padding: 10px 20px;
+}

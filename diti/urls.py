@@ -24,6 +24,9 @@ urlpatterns = patterns('',
                                         'template_name' : 'categories.html',
                                         }),
     url(r'^productos/(?P<slug>[^/]+)/$', 'main.views.product_category'), 
+    url(r'^productos/(?P<categoria>[-\w]+)/(?P<slug>[-\w]+)/$', DetailView.as_view(
+                                        model=Product,
+                                        template_name="product.html")),
     url(r'^(?P<slug>[^/]+)/$', DetailView.as_view(
                                         model=Section,
                                         template_name="section.html")),
