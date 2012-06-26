@@ -4,6 +4,6 @@
 	<h2>{{ product.title }}</h2>
 	<img src="/media/{{ product.imagen}}" title="{{ product.title }}" alt="{{ product.title }}"/>
 	{{ product.resumen|safe }}
-	<a href="{{ product.ficha_tecnica }}" class="buttonblue">Descargar Ficha Técnica</a>
+	<a href="/media/{{ product.ficha_tecnica }}" class="buttonblue">Descargar Ficha Técnica</a>
 	</div>
 {% endblock %}
