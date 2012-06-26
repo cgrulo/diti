@@ -1,6 +1,5 @@
 {% extends "base_2_cols.html" %}
 {% block contentcol %}
-	<div id="secwrapper">
 	{% for category in object_list %}
 		<article class="categories">
 			<a href="{{ category.slug }}" title="{{ category.title }}">
@@ -9,5 +8,4 @@
 			<h3><a href="{{ category.slug }}">{{ category.title }}</a></h3>			
 		</article>	
 	{% endfor %}
-	</div>
 {% endblock %}

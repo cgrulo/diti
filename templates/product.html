@@ -1,9 +1,7 @@
 {% extends "base_2_cols.html" %}
 {% block contentcol %}
-	<div id="secwrapper" class="single-product">
 	<h2>{{ product.title }}</h2>
 	<img src="/media/{{ product.imagen}}" title="{{ product.title }}" alt="{{ product.title }}"/>
 	{{ product.resumen|safe }}
 	<a href="/media/{{ product.ficha_tecnica }}" class="buttonblue">Descargar Ficha Técnica</a>
-	</div>
 {% endblock %}
