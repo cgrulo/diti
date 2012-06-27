@@ -343,3 +343,7 @@ footer #socials ul li #faceicon {
 	font-size: 25px;
 	margin: 0 0 3px 0;
 }
+.dlink{
+	display: block;
+	margin: 10px 0px;
+}
