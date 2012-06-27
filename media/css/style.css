@@ -328,11 +328,18 @@ footer #socials ul li #faceicon {
 }
 
 #sidebar {
-	width: 318px;
+	width: 338px;
 	float: right;
-	padding: 20px;
+	padding: 10px;
 } 
 .single-product {
 	padding: 10px 20px;
 }
-
+#sidebar {
+	list-style-type: none;
+}
+#sidebar li h4{
+	font-weight: normal;
+	font-size: 25px;
+	margin: 0 0 3px 0;
+}
