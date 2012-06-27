@@ -297,10 +297,10 @@ footer #socials ul li #faceicon {
 }
 #secwrapper{
 	width: 716px;
-	overflow: auto;
 	display:block;
 	float: left;
 	margin: 3px 0px 10px 0px;
+	padding: 10px 0px 20px 0px;
 }
 .categories {
 	position: relative;
